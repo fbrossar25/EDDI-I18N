@@ -51,12 +51,18 @@ namespace EddiDataDefinitions
             }
 
             Rarity result = RARITIES.FirstOrDefault(v => v.name == from);
+            // test LocalName
+            if (result == null)
+            {
+                result = RARITIES.FirstOrDefault(v => v.LocalName == from);
+            }
             if (result == null)
             {
                 Logging.Report("Unknown Rarity name " + from);
             }
             return result;
         }
+
 
         public static Rarity FromLevel(int from)
         {
