@@ -1,4 +1,4 @@
-﻿using EddiDataDefinitions;
+using EddiDataDefinitions;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -22,21 +22,12 @@ namespace EddiEvents
         public string commodity { get; private set; }
 
         [JsonProperty("LocalCommodity")]
-        public string LocalCommodity
-        {
-            get
-            {
-                if (commodity != null && commodity != "")
-                {
-                    return CommodityDefinitions.FromName(commodity).LocalName;
-                }
-                else return null;
-            }
-        }
+        public string LocalCommodity { get; }
 
         public CommodityRefinedEvent(DateTime timestamp, Commodity commodity) : base(timestamp, NAME)
         {
             this.commodity = (commodity == null ? "unknown commodity" : commodity.name);
+            this.LocalCommodity = (commodity == null ? "unknown commodity" : commodity.LocalName);
         }
     }
 }
