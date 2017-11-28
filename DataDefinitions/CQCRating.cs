@@ -47,6 +47,11 @@ namespace EddiDataDefinitions
         public static CQCRating FromName(string from)
         {
             CQCRating result = RATINGS.FirstOrDefault(v => v.name == from);
+            // test LocalName
+            if (result == null)
+            {
+                result = RATINGS.FirstOrDefault(v => v.LocalName == from);
+            }
             if (result == null)
             {
                 Logging.Report("Unknown CQC Rating name " + from);
