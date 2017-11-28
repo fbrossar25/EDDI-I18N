@@ -52,12 +52,18 @@ namespace EddiDataDefinitions
             }
 
             TradeRating result = RATINGS.FirstOrDefault(v => v.name == from);
+            // test LocalName
+            if (result == null)
+            {
+                result = RATINGS.FirstOrDefault(v => v.LocalName == from);
+            }
             if (result == null)
             {
                 Logging.Report("Unknown Trade Rating name " + from);
             }
             return result;
         }
+
 
         public static TradeRating FromEDName(string from)
         {
