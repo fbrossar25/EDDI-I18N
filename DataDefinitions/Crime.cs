@@ -59,6 +59,11 @@ namespace EddiDataDefinitions
             }
 
             Crime result = CRIMES.FirstOrDefault(v => v.name == from);
+            // test LocalName
+            if (result == null)
+            {
+                result = CRIMES.FirstOrDefault(v => v.LocalName == from);
+            }
             if (result == null)
             {
                 Logging.Report("Unknown Crime name " + from);
