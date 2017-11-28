@@ -209,6 +209,11 @@ namespace EddiDataDefinitions
 
             string tidiedFrom = from.ToLowerInvariant().Replace(" ", "").Replace("cadmiun", "cadmium");
             Material result = MATERIALS.FirstOrDefault(v => v.name.ToLowerInvariant().Replace(" ", "") == tidiedFrom);
+            // test LocalName
+            if (result == null)
+            {
+                result = MATERIALS.FirstOrDefault(v => v.LocalName.ToLowerInvariant().Replace(" ", "") == tidiedFrom);
+            }
             if (result == null)
             {
                 // Fall back to the edname if searching by name fails.
