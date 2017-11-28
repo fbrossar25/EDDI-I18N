@@ -54,7 +54,6 @@ namespace EddiDataDefinitions
             }
             return result;
         }
-
         public static Superpower FromName(string from)
         {
             if (from == null)
@@ -63,6 +62,11 @@ namespace EddiDataDefinitions
             }
 
             Superpower result = SUPERPOWERS.FirstOrDefault(v => v.name == from);
+            // test LocalName
+            if (result == null)
+            {
+                result = SUPERPOWERS.FirstOrDefault(v => v.LocalName == from);
+            }
             return result;
         }
 
