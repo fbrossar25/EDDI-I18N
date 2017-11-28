@@ -52,6 +52,11 @@ namespace EddiDataDefinitions
             }
 
             ExplorationRating result = RATINGS.FirstOrDefault(v => v.name == from);
+            // test LocalName
+            if (result == null)
+            {
+                result = RATINGS.FirstOrDefault(v => v.LocalName == from);
+            }
             if (result == null)
             {
                 Logging.Report("Unknown Exploration Rating name " + from);
