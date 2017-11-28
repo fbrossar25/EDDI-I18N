@@ -1257,10 +1257,6 @@
       "en": "ˈpɛɡəˌsaɪ",
       "fr": "peɡaz"
     },
-    "phonetic_Persei": {
-      "en": "ˈpɜːsɪˌaɪ",
-      "fr": "pɛʁse"
-    },
     "phonetic_Piscium": {
       "en": "ˈpaɪsɪəm",
       "fr": "pwasɔ~"
@@ -1338,10 +1334,6 @@
       "fr": "to"
     },
     "phonetic_TauCeti_Ceti": {
-      "en": "ˈsiːtaɪ",
-      "fr": "seti"
-    },
-    "phonetic_Ceti": {
       "en": "ˈsiːtaɪ",
       "fr": "seti"
     },
@@ -3061,18 +3053,6 @@
       "en": "Multi-Cannon",
       "fr": "Multi-canon"
     },
-    "Hpt_PlasmaAccelerator_Fixed_Medium": {
-      "en": "Multi-Cannon",
-      "fr": "Multi-canon"
-    },
-    "Hpt_PlasmaAccelerator_Fixed_Large": {
-      "en": "Multi-Cannon",
-      "fr": "Multi-canon"
-    },
-    "Hpt_PlasmaAccelerator_Fixed_Huge": {
-      "en": "Multi-Cannon",
-      "fr": "Multi-canon"
-    },
     "Hpt_ATMultiCannon_Fixed_Medium": {
       "en": "A X Multi-Cannon",
       "fr": "Multi-canon A X"
@@ -3780,10 +3760,6 @@
     "Hpt_MiningLaser_Fixed_Small_Advanced": {
       "en": "Mining Lance",
       "fr": "Lance de minage"
-    },
-    "Int_LifeSupport_Size1_Class1_free": {
-      "en": "Life Support",
-      "fr": "Systèmes de Survie"
     },
     "Int_Engine_Size2_Class1_free": {
       "en": "Thrusters",
@@ -5361,22 +5337,6 @@
       "en": "Hull Reinforcement Package",
       "fr": "Renforts de coque"
     },
-    "Int_HullReinforcement_Size2_Class1": {
-      "en": "Hull Reinforcement Package",
-      "fr": "Renforts de coque"
-    },
-    "Int_HullReinforcement_Size2_Class2": {
-      "en": "Hull Reinforcement Package",
-      "fr": "Renforts de coque"
-    },
-    "Int_HullReinforcement_Size2_Class1": {
-      "en": "Hull Reinforcement Package",
-      "fr": "Renforts de coque"
-    },
-    "Int_HullReinforcement_Size2_Class2": {
-      "en": "Hull Reinforcement Package",
-      "fr": "Renforts de coque"
-    },
     "Int_HullReinforcement_Size3_Class1": {
       "en": "Hull Reinforcement Package",
       "fr": "Renforts de coque"
@@ -5442,10 +5402,6 @@
       "fr": "Générateur de bouclier entrelacé"
     },
     "Int_ShieldGenerator_Size2_Class3_Fast": {
-      "en": "Bi-Weave Shield Generator",
-      "fr": "Générateur de bouclier entrelacé"
-    },
-    "Int_ShieldGenerator_Size3_Class3_Fast": {
       "en": "Bi-Weave Shield Generator",
       "fr": "Générateur de bouclier entrelacé"
     },
@@ -6025,10 +5981,6 @@
       "en": "Expert",
       "fr": "Expert"
     },
-    "Master": {
-      "en": "Master",
-      "fr": "Maître"
-    },
     "Dangerous": {
       "en": "Dangerous",
       "fr": "Vétéran"
@@ -6134,10 +6086,6 @@
       "fr": "Aucun"
     },
     "$SYSTEM_SECURITY_none;": {
-      "en": "None",
-      "fr": "Aucun"
-    },
-    "$SYSTEM_SECURITY_low;": {
       "en": "None",
       "fr": "Aucun"
     },
@@ -6620,10 +6568,6 @@
     "AquaponicSystems": {
       "en": "Aquaponic Systems",
       "fr": "Systèmes aquaponiques"
-    },
-    "Uraninite": {
-      "en": "Uraninite",
-      "fr": "Uraninite"
     },
     "AutoFabricators": {
       "en": "Auto-Fabricators",
@@ -7449,10 +7393,6 @@
       "en": "Bromellite",
       "fr": "Bromellite"
     },
-    "Osmium": {
-      "en": "Osmium",
-      "fr": "Osmium"
-    },
     "Samarium": {
       "en": "Samarium",
       "fr": "Samarium"
@@ -7976,10 +7916,6 @@
     "Power plant": {
       "en": "Power plant",
       "fr": "Générateurs"
-    },
-    "Detailed surface scanner": {
-      "en": "Detailed surface scanner",
-      "fr": "Détecteur de surface"
     },
     "Detailed surface scanner": {
       "en": "Detailed surface scanner",
