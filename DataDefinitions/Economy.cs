@@ -53,12 +53,18 @@ namespace EddiDataDefinitions
             }
 
             Economy result = ECONOMIES.FirstOrDefault(v => v.name == from);
+            // test LocalName
+            if (result == null)
+            {
+                result = ECONOMIES.FirstOrDefault(v => v.LocalName == from);
+            }
             if (result == null)
             {
                 Logging.Report("Unknown Economy name " + from);
             }
             return result;
         }
+
 
         public static Economy FromEDName(string from)
         {
