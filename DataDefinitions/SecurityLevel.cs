@@ -48,12 +48,18 @@ namespace EddiDataDefinitions
             }
 
             SecurityLevel result = SECURITYLEVELS.FirstOrDefault(v => v.name == from);
+            // test LocalName
+            if (result == null)
+            {
+                result = SECURITYLEVELS.FirstOrDefault(v => v.LocalName == from);
+            }
             if (result == null)
             {
                 Logging.Report("Unknown Security Level name " + from);
             }
             return result;
         }
+
 
         public static SecurityLevel FromEDName(string from)
         {
