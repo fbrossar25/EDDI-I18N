@@ -1,4 +1,4 @@
-﻿using EddiDataDefinitions;
+using EddiDataDefinitions;
 using System;
 using System.Collections.Generic;
 
@@ -8,8 +8,9 @@ namespace EddiEvents
     {
         public const string NAME = "Mission accepted";
         public const string DESCRIPTION = "Triggered when you accept a mission";
-        public const string SAMPLE = "{ \"timestamp\":\"2016-09-22T05:54:00Z\", \"event\":\"MissionAccepted\", \"Faction\":\"Mafia of Cavins\", \"Name\":\"Mission_PassengerVIP\", \"Commodity\":\"$DomesticAppliances_Name;\", \"Commodity_Localised\":\"Domestic Appliances\", \"Count\":3, \"DestinationSystem\":\"Carnoeck\", \"DestinationStation\":\"Bacon City\", \"Expiry\":\"2016-09-22T07:38:43Z\", \"PassengerCount\":3, \"PassengerVIPs\":true, \"PassengerWanted\":false, \"PassengerType\":\"Tourist\", \"MissionID\":26480079 }";
-        public static Dictionary<string, string> VARIABLES = new Dictionary<string, string>();
+        public const string SAMPLE = "{ \"timestamp\":\"2017-09-27T11:03:32Z\", \"event\":\"MissionAccepted\", \"Faction\":\"Official Njula Focus\", \"Name\":\"Mission_Courier_Boom\", \"LocalisedName\":\"Livraison de données économiques\", \"TargetFaction\":\"HIP 12361 Free\", \"DestinationSystem\":\"HIP 12361\", \"DestinationStation\":\"Vess Gateway\", \"Expiry\":\"2017-09-28T11:02:51Z\", \"Influence\":\"Low\" \"Reputation\":\"Med\", \"Reward\":16812, \"MissionID\":213720915 }";
+
+		public static Dictionary<string, string> VARIABLES = new Dictionary<string, string>();
 
         static MissionAcceptedEvent()
         {
@@ -30,6 +31,7 @@ namespace EddiEvents
             VARIABLES.Add("expiry", "The expiry date of the mission");
             VARIABLES.Add("influence", "The increase in the faction's influence in the system gained when completing this mission (None/Low/Med/High)");
             VARIABLES.Add("reputation", "The increase in the commander's reputation with the faction gained when completing this mission (None/Low/Med/High)");
+            VARIABLES.Add("LocalName", "the human readable name on the mission (the ED Localised name)");
         }
 
         public long? missionid { get; private set; }
@@ -76,10 +78,13 @@ namespace EddiEvents
 
         public string reputation { get; private set; }
 
-        public MissionAcceptedEvent(DateTime timestamp, long? missionid, string name, string faction, string destinationsystem, string destinationstation, Commodity commodity, int? amount, string passengertype, bool? passengerswanted, string target, string targettype, string targetfaction, bool communal, DateTime? expiry, string influence, string reputation) : base(timestamp, NAME)
+        public string LocalName { get; private set; }
+
+        public MissionAcceptedEvent(DateTime timestamp, long? missionid, string name, string LocalisedName, string faction, string destinationsystem, string destinationstation, Commodity commodity, int? amount, string passengertype, bool? passengerswanted, string target, string targettype, string targetfaction, bool communal, DateTime? expiry, string influence, string reputation) : base(timestamp, NAME)
         {
             this.missionid = missionid;
             this.name = name;
+            this.LocalName = LocalisedName;
             this.faction = faction;
             this.destinationsystem = destinationsystem;
             this.destinationstation = destinationstation;
