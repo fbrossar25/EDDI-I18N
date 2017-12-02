@@ -12,6 +12,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using Utilities;
+using System.Collections;
 
 namespace EddiJournalMonitor
 {
@@ -310,40 +311,39 @@ namespace EddiJournalMonitor
                             break;
                         case "Promotion":
                             {
-                                object val;
                                 if (data.ContainsKey("Combat"))
                                 {
-                                    data.TryGetValue("Combat", out val);
-                                    CombatRating rating = CombatRating.FromRank((int)val);
+                                    int RankRating = getInt(data, "Combat");
+                                    CombatRating rating = CombatRating.FromRank(RankRating);
                                     events.Add(new CombatPromotionEvent(timestamp, rating) { raw = line });
                                     handled = true;
                                 }
                                 else if (data.ContainsKey("Trade"))
                                 {
-                                    data.TryGetValue("Trade", out val);
-                                    TradeRating rating = TradeRating.FromRank((int)val);
+                                    int RankRating = getInt(data, "Trade");
+                                    TradeRating rating = TradeRating.FromRank(RankRating);
                                     events.Add(new TradePromotionEvent(timestamp, rating) { raw = line });
                                     handled = true;
                                 }
                                 else if (data.ContainsKey("Explore"))
                                 {
-                                    data.TryGetValue("Explore", out val);
-                                    ExplorationRating rating = ExplorationRating.FromRank((int)val);
+                                    int RankRating = getInt(data, "Explore");
+                                    ExplorationRating rating = ExplorationRating.FromRank(RankRating);
                                     events.Add(new ExplorationPromotionEvent(timestamp, rating) { raw = line });
                                     handled = true;
                                 }
                                 else if (data.ContainsKey("Federation"))
                                 {
                                     Superpower superpower = Superpower.FromName("Federation");
-                                    data.TryGetValue("Federation", out val);
-                                    FederationRating rating = FederationRating.FromRank((int)val);
+                                    int RankRating = getInt(data, "Federation");
+                                    FederationRating rating = FederationRating.FromRank(RankRating);
                                     events.Add(new FederationPromotionEvent(timestamp, rating) { raw = line });
                                     handled = true;
                                 }
                                 else if (data.ContainsKey("Empire"))
                                 {
-                                    data.TryGetValue("Empire", out val);
-                                    EmpireRating rating = EmpireRating.FromRank((int)val);
+                                    int RankRating = getInt(data, "Empire");
+                                    EmpireRating rating = EmpireRating.FromRank(RankRating);
                                     events.Add(new EmpirePromotionEvent(timestamp, rating) { raw = line });
                                     handled = true;
                                 }
@@ -1120,12 +1120,11 @@ namespace EddiJournalMonitor
                             break;
                         case "Interdicted":
                             {
-                                object val;
                                 bool submitted = getBool(data, "Submitted");
                                 string interdictor = getString(data, "Interdictor");
                                 bool iscommander = getBool(data, "IsPlayer");
-                                data.TryGetValue("CombatRank", out val);
-                                CombatRating rating = (val == null ? null : CombatRating.FromRank((int)val));
+                                int RankRating = getInt(data, "CombatRank");
+                                CombatRating rating = (CombatRating.FromRank(RankRating));
                                 string faction = getFaction(data, "Faction");
                                 string power = getString(data, "Power");
 
@@ -1144,12 +1143,11 @@ namespace EddiJournalMonitor
                             break;
                         case "Interdiction":
                             {
-                                object val;
                                 bool success = getBool(data, "Success");
                                 string interdictee = getString(data, "Interdicted");
                                 bool iscommander = getBool(data, "IsPlayer");
-                                data.TryGetValue("CombatRank", out val);
-                                CombatRating rating = (val == null ? null : CombatRating.FromRank((int)val));
+                                int RankRating = getInt(data, "CombatRank");
+                                CombatRating rating = CombatRating.FromRank(RankRating);
                                 string faction = getFaction(data, "Faction");
                                 string power = getString(data, "Power");
 
@@ -1159,10 +1157,9 @@ namespace EddiJournalMonitor
                             break;
                         case "PVPKill":
                             {
-                                object val;
                                 string victim = getString(data, "Victim");
-                                data.TryGetValue("CombatRank", out val);
-                                CombatRating rating = (val == null ? null : CombatRating.FromRank((int)val));
+                                int RankRating = getInt(data, "CombatRank");
+                                CombatRating rating = CombatRating.FromRank(RankRating);
 
                                 events.Add(new KilledEvent(timestamp, victim, rating) { raw = line });
                                 handled = true;
@@ -1637,13 +1634,11 @@ namespace EddiJournalMonitor
                             }
                         case "CrewHire":
                             {
-                                object val;
                                 string name = getString(data, "Name");
                                 string faction = getFaction(data, "Faction");
-                                data.TryGetValue("Cost", out val);
-                                long price = (long)val;
-                                data.TryGetValue("CombatRank", out val);
-                                CombatRating rating = CombatRating.FromRank((int)val);
+                                long price = getLong(data, "Cost");
+                                int RankRating = getInt(data, "CombatRank");
+                                CombatRating rating = CombatRating.FromRank(RankRating);
                                 events.Add(new CrewHiredEvent(timestamp, name, faction, price, rating) { raw = line });
                                 handled = true;
                                 break;
@@ -2028,7 +2023,7 @@ namespace EddiJournalMonitor
                                 string name = getString(data, "Name");
                                 string system = getString(data, "System");
 
-                                events.Add(new MissionAcceptedEvent(timestamp, null, name, system, null, null, null, null, null, null, null, null, null, true, null, null, null) { raw = line });
+                                events.Add(new MissionAcceptedEvent(timestamp, null, name, null, system, null, null, null, null, null, null, null, null, null, true, null, null, null) { raw = line });
                                 handled = true;
                                 break;
                             }
@@ -2052,6 +2047,7 @@ namespace EddiJournalMonitor
                                 data.TryGetValue("Expiry", out val);
                                 DateTime? expiry = (val == null ? (DateTime?)null : (DateTime)val);
                                 string name = getString(data, "Name");
+                                string LocalisedName = getString(data, "LocalisedName");
                                 string faction = getFaction(data, "Faction");
 
                                 // Missions with destinations
@@ -2086,7 +2082,7 @@ namespace EddiJournalMonitor
                                 string influence = getString(data, "Influence");
                                 string reputation = getString(data, "Reputation");
 
-                                events.Add(new MissionAcceptedEvent(timestamp, missionid, name, faction, destinationsystem, destinationstation, commodity, amount, passengertype, passengerswanted, target, targettype, targetfaction, false, expiry, influence, reputation) { raw = line });
+                                events.Add(new MissionAcceptedEvent(timestamp, missionid, name, LocalisedName, faction, destinationsystem, destinationstation, commodity, amount, passengertype, passengerswanted, target, targettype, targetfaction, false, expiry, influence, reputation) { raw = line });
                                 handled = true;
                                 break;
                             }
