@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using Utilities;
 
@@ -39,7 +39,7 @@ namespace EddiDataDefinitions
         public static readonly CombatRating Novice = new CombatRating("Novice", 2, "Novice");
         public static readonly CombatRating Competent = new CombatRating("Competent", 3, "Competent");
         public static readonly CombatRating Expert = new CombatRating("Expert", 4, "Expert");
-        public static readonly CombatRating Master = new CombatRating("Master", 5, "Master");
+        public static readonly CombatRating Master = new CombatRating("CombatMaster", 5, "Master");
         public static readonly CombatRating Dangerous = new CombatRating("Dangerous", 6, "Dangerous");
         public static readonly CombatRating Deadly = new CombatRating("Deadly", 7, "Deadly");
         public static readonly CombatRating Elite = new CombatRating("Elite", 8, "Elite");
@@ -65,7 +65,8 @@ namespace EddiDataDefinitions
         }
 
         public static CombatRating FromEDName(string from)
-        {
+        {  
+            if (from == "Master") { from = "CombatMaster"; }
             if (from == null)
             {
                 return null;
