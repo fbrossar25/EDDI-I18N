@@ -36,7 +36,7 @@ namespace EddiDataDefinitions
         public static readonly Voucher Scannable = new Voucher("scannable", "Scannable");
         public static readonly Voucher Settlement = new Voucher("settlement", "Settlement");
         public static readonly Voucher Trade = new Voucher("trade", "Trade");
-
+        
         public static Voucher FromName(string from)
         {
             if (from == null)
@@ -45,6 +45,11 @@ namespace EddiDataDefinitions
             }
 
             Voucher result = VOUCHERS.FirstOrDefault(v => v.name == from);
+            // test LocalName
+            if (result == null)
+            {
+                result = VOUCHERS.FirstOrDefault(v => v.LocalName == from);
+            }
             if (result == null)
             {
                 Logging.Report("Unknown Voucher name " + from);

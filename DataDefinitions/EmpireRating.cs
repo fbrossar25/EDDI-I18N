@@ -58,12 +58,18 @@ namespace EddiDataDefinitions
             }
 
             EmpireRating result = RATINGS.FirstOrDefault(v => v.name == from);
+            // test LocalName
+            if (result == null)
+            {
+                result = RATINGS.FirstOrDefault(v => v.LocalName == from);
+            }
             if (result == null)
             {
                 Logging.Report("Unknown Empire Rating name " + from);
             }
             return result;
         }
+
 
         public static EmpireRating FromEDName(string from)
         {

@@ -58,12 +58,18 @@ namespace EddiDataDefinitions
             }
 
             Government result = GOVERNMENTS.FirstOrDefault(v => v.name == from);
+            // test LocalName
+            if (result == null)
+            {
+                result = GOVERNMENTS.FirstOrDefault(v => v.LocalName == from);
+            }
             if (result == null)
             {
                 Logging.Report("Unknown Government name " + from);
             }
             return result;
         }
+
 
         public static Government FromEDName(string from)
         {

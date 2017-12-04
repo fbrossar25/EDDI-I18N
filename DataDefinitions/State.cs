@@ -58,6 +58,11 @@ namespace EddiDataDefinitions
             {
                 result = STATES.FirstOrDefault(v => v.name == from);
             }
+            // test LocalName
+            if (result == null)
+            {
+                result = STATES.FirstOrDefault(v => v.LocalName == from);
+            }
             if (result == null)
             {
                 Logging.Report("Unknown State name " + from);

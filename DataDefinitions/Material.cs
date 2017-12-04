@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using Utilities;
 using Newtonsoft.Json;
@@ -41,6 +41,15 @@ namespace EddiDataDefinitions
 
         // Location of the material
         public string location { get; set; }
+
+        public string LocalLocation
+        {
+            get
+            {
+                return I18N.GetString(location) ?? location;
+            }
+
+        }
 
         private Material(string EDName, string category, string name, Rarity rarity, string symbol = null, decimal? goodpctbody = null, decimal? greatpctbody = null)
         {
@@ -209,6 +218,11 @@ namespace EddiDataDefinitions
 
             string tidiedFrom = from.ToLowerInvariant().Replace(" ", "").Replace("cadmiun", "cadmium");
             Material result = MATERIALS.FirstOrDefault(v => v.name.ToLowerInvariant().Replace(" ", "") == tidiedFrom);
+            // test LocalName
+            if (result == null)
+            {
+                result = MATERIALS.FirstOrDefault(v => v.LocalName.ToLowerInvariant().Replace(" ", "") == tidiedFrom);
+            }
             if (result == null)
             {
                 // Fall back to the edname if searching by name fails.

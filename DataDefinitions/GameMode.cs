@@ -43,12 +43,18 @@ namespace EddiDataDefinitions
             }
 
             GameMode result = MODES.FirstOrDefault(v => v.name == from);
+            // test LocalName
+            if (result == null)
+            {
+                result = MODES.FirstOrDefault(v => v.LocalName == from);
+            }
             if (result == null)
             {
                 Logging.Report("Unknown game mode name " + from);
             }
             return result;
         }
+
 
         public static GameMode FromEDName(string from)
         {

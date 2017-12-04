@@ -45,6 +45,11 @@ namespace EddiDataDefinitions
             }
 
             DataScan result = DATASCANS.FirstOrDefault(v => v.name == from);
+            // test LocalName
+            if (result == null)
+            {
+                result = DATASCANS.FirstOrDefault(v => v.LocalName == from);
+            }
             if (result == null)
             {
                 Logging.Report("Unknown Data Link name " + from);

@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
 using Utilities;
@@ -48,6 +48,11 @@ namespace EddiDataDefinitions
             }
 
             Composition result = COMPOSITIONS.FirstOrDefault(v => v.name == from);
+            // test LocalName
+            if (result == null)
+            {
+                result = COMPOSITIONS.FirstOrDefault(v => v.LocalName == from);
+            }
             if (result == null)
             {
                 Logging.Report("Unknown composition name " + from);

@@ -1257,10 +1257,6 @@
       "en": "ˈpɛɡəˌsaɪ",
       "fr": "peɡaz"
     },
-    "phonetic_Persei": {
-      "en": "ˈpɜːsɪˌaɪ",
-      "fr": "pɛʁse"
-    },
     "phonetic_Piscium": {
       "en": "ˈpaɪsɪəm",
       "fr": "pwasɔ~"
@@ -1338,10 +1334,6 @@
       "fr": "to"
     },
     "phonetic_TauCeti_Ceti": {
-      "en": "ˈsiːtaɪ",
-      "fr": "seti"
-    },
-    "phonetic_Ceti": {
       "en": "ˈsiːtaɪ",
       "fr": "seti"
     },
@@ -3061,18 +3053,6 @@
       "en": "Multi-Cannon",
       "fr": "Multi-canon"
     },
-    "Hpt_PlasmaAccelerator_Fixed_Medium": {
-      "en": "Multi-Cannon",
-      "fr": "Multi-canon"
-    },
-    "Hpt_PlasmaAccelerator_Fixed_Large": {
-      "en": "Multi-Cannon",
-      "fr": "Multi-canon"
-    },
-    "Hpt_PlasmaAccelerator_Fixed_Huge": {
-      "en": "Multi-Cannon",
-      "fr": "Multi-canon"
-    },
     "Hpt_ATMultiCannon_Fixed_Medium": {
       "en": "A X Multi-Cannon",
       "fr": "Multi-canon A X"
@@ -3780,10 +3760,6 @@
     "Hpt_MiningLaser_Fixed_Small_Advanced": {
       "en": "Mining Lance",
       "fr": "Lance de minage"
-    },
-    "Int_LifeSupport_Size1_Class1_free": {
-      "en": "Life Support",
-      "fr": "Systèmes de Survie"
     },
     "Int_Engine_Size2_Class1_free": {
       "en": "Thrusters",
@@ -5361,22 +5337,6 @@
       "en": "Hull Reinforcement Package",
       "fr": "Renforts de coque"
     },
-    "Int_HullReinforcement_Size2_Class1": {
-      "en": "Hull Reinforcement Package",
-      "fr": "Renforts de coque"
-    },
-    "Int_HullReinforcement_Size2_Class2": {
-      "en": "Hull Reinforcement Package",
-      "fr": "Renforts de coque"
-    },
-    "Int_HullReinforcement_Size2_Class1": {
-      "en": "Hull Reinforcement Package",
-      "fr": "Renforts de coque"
-    },
-    "Int_HullReinforcement_Size2_Class2": {
-      "en": "Hull Reinforcement Package",
-      "fr": "Renforts de coque"
-    },
     "Int_HullReinforcement_Size3_Class1": {
       "en": "Hull Reinforcement Package",
       "fr": "Renforts de coque"
@@ -5442,10 +5402,6 @@
       "fr": "Générateur de bouclier entrelacé"
     },
     "Int_ShieldGenerator_Size2_Class3_Fast": {
-      "en": "Bi-Weave Shield Generator",
-      "fr": "Générateur de bouclier entrelacé"
-    },
-    "Int_ShieldGenerator_Size3_Class3_Fast": {
       "en": "Bi-Weave Shield Generator",
       "fr": "Générateur de bouclier entrelacé"
     },
@@ -6025,7 +5981,7 @@
       "en": "Expert",
       "fr": "Expert"
     },
-    "Master": {
+    "CombatMaster": {
       "en": "Master",
       "fr": "Maître"
     },
@@ -6134,10 +6090,6 @@
       "fr": "Aucun"
     },
     "$SYSTEM_SECURITY_none;": {
-      "en": "None",
-      "fr": "Aucun"
-    },
-    "$SYSTEM_SECURITY_low;": {
       "en": "None",
       "fr": "Aucun"
     },
@@ -6620,10 +6572,6 @@
     "AquaponicSystems": {
       "en": "Aquaponic Systems",
       "fr": "Systèmes aquaponiques"
-    },
-    "Uraninite": {
-      "en": "Uraninite",
-      "fr": "Uraninite"
     },
     "AutoFabricators": {
       "en": "Auto-Fabricators",
@@ -7449,10 +7397,6 @@
       "en": "Bromellite",
       "fr": "Bromellite"
     },
-    "Osmium": {
-      "en": "Osmium",
-      "fr": "Osmium"
-    },
     "Samarium": {
       "en": "Samarium",
       "fr": "Samarium"
@@ -7981,10 +7925,6 @@
       "en": "Detailed surface scanner",
       "fr": "Détecteur de surface"
     },
-    "Detailed surface scanner": {
-      "en": "Detailed surface scanner",
-      "fr": "Détecteur de surface"
-    },
     "Shield generator": {
       "en": "Shield generator",
       "fr": "Générateur de bouclier"
@@ -8032,6 +7972,122 @@
     "testbuggy": {
       "en": "testbuggy",
       "fr": "testbuggy"
+    },
+    "Obtained by scanning system authority vessels.": {
+      "en": "Obtained by scanning system authority vessels",
+      "fr": "Obtenu en scannant des vaisseaux de l'autorité du système"
+    },
+    "Obtained by scanning vessels.": {
+      "en": "Obtained by scanning vessels",
+      "fr": "Obtenus en scannant des vaisseaux"
+    },
+    "Obtained by scanning satellites orbiting installations and populated Earth-like worlds.": {
+      "en": "Obtained by scanning satellites orbiting installations and populated Earth-like worlds",
+      "fr": "Obtenu en scannant des satellites en orbite autour d'installations ou de mondes telluriques peuplés"
+    },
+    "Obtained by scanning frame shift high wakes of vessels.": {
+      "en": "Obtained by scanning frame shift high wakes of vessels",
+      "fr": "Obtenu en scannant des sillages FSD de forte intensité"
+    },
+    "Obtained from surface prospecting or asteroid mining.": {
+      "en": "Obtained from surface prospecting or asteroid mining",
+      "fr": "Obtenu à partir de la prospection de surface ou de l'extraction minière d'astéroïdes"
+    },
+    "Obtained by scanning datalinks in ground bases.": {
+      "en": "Obtained by scanning datalinks in ground bases",
+      "fr": "Obtenu en scannant des liaisons de données dans des bases au sol"
+    },
+    "Obtained as a mission reward.": {
+      "en": "Obtained as a mission reward",
+      "fr": "Obtenu comme récompense de mission"
+    },
+    "Obtained from the wreckage of haulage vessels.": {
+      "en": "Obtained from the wreckage of haulage vessels",
+      "fr": "Obtenu à partir d'épave de vaisseau de transport"
+    },
+    "Obtained from the wreckage of large haulage vessels, commonly Type-7s and Type 9s.  These are also available at Dav's Hope.": {
+      "en": "Obtained from the wreckage of large haulage vessels, commonly Type-7s and Type 9s.  These are also available at Dav's Hope",
+      "fr": "Obtenu à partir de l'épave de grands vaisseaux de transport, généralement Type-7 et Type-9. Ceux-ci sont également disponibles chez Dav's Hope"
+    },
+    "Obtained by scanning large haulage vessels, commonly Type-7s and Type-9s .": {
+      "en": "Obtained by scanning large haulage vessels, commonly Type-7s and Type-9s",
+      "fr": "Obtenu à partir de l'épave de grands vaisseaux de transport, généralement Type-7 et Type-9"
+    },
+    "Obtained from the wreckage of combat vessels.  These are also available at Dav's Hope.": {
+      "en": "Obtained from the wreckage of combat vessels.  These are also available at Dav's Hope",
+      "fr": "Obtenu à partir d'épave de vaisseau de combat, également disponibles chez Dav's Hope"
+    },
+    "Obtained from the wreckage of combat vessels.": {
+      "en": "Obtained from the wreckage of combat vessels.",
+      "fr": "Obtenu à partir d'épave de vaisseau de combat"
+    },
+    "Obtained in high-grade signal sources in civil unrest systems.": {
+      "en": "Obtained in high-grade signal sources in civil unrest systems.",
+      "fr": "Obtenu dans des sources de signal de haute qualité dans les systèmes en troubles civils."
+    },
+    "Obtained from the wreckage of large haulage and passenger vessels such as Type-9s and Beluga liners.  These are also available at Dav's Hope.": {
+      "en": "Obtained from the wreckage of large haulage and passenger vessels such as Type-9s and Beluga liners.  These are also available at Dav's Hope.",
+      "fr": "Obtenu à partir d'épave de grands vaisseau de transport et de passagers tels que les paquebots Type-9 et Beluga, également disponibles chez Dav's Hope.."
+    },
+    "Obtained from the wreckage of ???. These are also available at Dav's Hope.": {
+      "en": "Component found in ships: frequently used by haulage vessels. Destroyed haulage vessels can be scavenged from the aftermath of combat in shipping lanes. Known to be salvaged from signal sources in low security systems. These are also available at Dav's Hope.",
+      "fr": "Composant fréquemment utilisé par les vaisseaux de transport, peuvant être récupérés à la suite de combats dans les couloirs de navigation. Connu pour être récupérable dans les sources de signal des systèmes de basse sécurité."
+    },
+    "Obtained in high-grade signal sources in systems under Federal control.": {
+      "en": "Obtained in high-grade signal sources in systems under Federal control.",
+      "fr": "Obtenu dans les sources de signal de haute qualité dans les systèmes sous contrôle fédéral."
+    },
+    "Obtained by scanning haulage vessels.": {
+      "en": "Obtained by scanning haulage vessels.",
+      "fr": "Obtenu en scannant des vaisseaux de transport."
+    },
+    "Obtained from the wreckage of combat and system authority vessels.": {
+      "en": "Obtained from the wreckage of combat and system authority vessels.",
+      "fr": "Obtenu à partir d'épave de vaisseau de combat et de l'autorité du système."
+    },
+    "Obtained from the wreckage of small combat vessels.": {
+      "en": "Obtained from the wreckage of small combat vessels.",
+      "fr": "Obtenu à partir de l'épave de petits navires de combat."
+    },
+    "Obtained from the wreckage of small combat vessels.  These are also available at Dav's Hope.": {
+      "en": "Obtained from the wreckage of small combat vessels.  These are also available at Dav's Hope.",
+      "fr": "Obtenu à partir d'épave de petits vaisseau de combat, également disponibles à Dav's Hope."
+    },
+    "Obtained from the wreckage of large combat vessels, commonly Anacondas and Federal Corvettes.  These are also available at Dav's Hope.": {
+      "en": "Obtained from the wreckage of large combat vessels, commonly Anacondas and Federal Corvettes.  These are also available at Dav's Hope.",
+      "fr": "Obtenu à partir d'épave de grands vaisseau de combat, communément Anacondas et Corvettes fédérales, également disponibles chez Dav's Hope."
+    },
+    "Obtained from the wreckage of large combat vessels, commonly Anacondas and Federal Corvettes.": {
+      "en": "Obtained from the wreckage of large combat vessels, commonly Anacondas and Federal Corvettes.",
+      "fr": "Obtenu à partir d'épave de grands vaisseau de combat, communément Anacondas et Corvettes fédérales."
+    },
+    "Obtained in high-grade signal sources in systems under Imperial control.": {
+      "en": "Obtained in high-grade signal sources in systems under Imperial control.",
+      "fr": "Obtenu dans des sources de signal de haute qualité dans des systèmes sous contrôle impérial."
+    },
+    "Obtained from the wreckage of small haulage vessels.  These are also available at Dav's Hope.": {
+      "en": "Obtained from the wreckage of small haulage vessels.  These are also available at Dav's Hope.",
+      "fr": "Obtenu à partir d'épave de petits vaisseaux de transport, également disponibles à Dav's Hope."
+    },
+    "Obtained in high-grade signal sources in war or civil war systems.": {
+      "en": "Obtained in high-grade signal sources in war or civil war systems.",
+      "fr": "Obtenu dans des sources de signal de haute qualité dans les systèmes en guerre ou en guerre civile."
+    },
+     "Obtained by scanning datalinks in ground bases or scanning private data beacons in encoded signal sources.": {
+      "en": "Obtained by scanning datalinks in ground bases or scanning private data beacons in encoded signal sources.",
+      "fr": "Obtenu en scannant des liaisons de données dans des bases au sol ou en scannant des balises de données privées dans des sources de signaux codées."
+    },
+     "Obtained in high-grade signal sources in outbreak systems.": {
+      "en": "Obtained in high-grade signal sources in outbreak systems.",
+      "fr": "Obtenu dans les sources de signal de haute qualité dans les systèmes où il y a une épidémie."
+    },
+     "Obtained in high-grade signal sources Federal control.": {
+      "en": "Obtained in high-grade signal sources Federal control.",
+      "fr": "Obtenu dans les sources de signal de haute qualité sous Contrôle fédéral."
+    },
+     "Obtained in high-grade signal sources in boom systems.": {
+      "en": "Obtained in high-grade signal sources in boom systems.",
+      "fr": "Obtenu dans les sources de signal de haute qualité dans les systèmes en essor économique."
     }
   }
 }

@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using Utilities;
 
 namespace EddiDataDefinitions
@@ -20,7 +20,11 @@ namespace EddiDataDefinitions
         {
             get
             {
-                return I18N.GetString(composition) ?? composition;
+                if (composition != null && composition != "")
+                {
+                    return Composition.FromName(composition).LocalName;
+                }
+                else return null;
             }
         }
 

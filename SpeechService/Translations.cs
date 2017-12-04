@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -362,7 +362,7 @@ namespace EddiSpeechService
                     secondPiece = ICAO(secondPiece, true);
                 }
                 Console.WriteLine("2) Second piece is " + secondPiece);
-                secondPiece = secondPiece.Replace("-", " dash ");
+                secondPiece = secondPiece.Replace("-", I18N.GetString("trans_dash"));
                 Console.WriteLine("3) Second piece is " + secondPiece);
 
                 starSystem = firstPiece + subPiece + " " + secondPiece;
